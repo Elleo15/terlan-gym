@@ -98,8 +98,8 @@ ul {
   visibility: hidden;
 }
 .loader-logo {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   animation: loaderPulse 1.5s ease infinite;
 }
 .loader-bar {
