@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tərlan Əliyev — Fitness Trainer | Sumqayıt & Xırdalan</title>
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Tərlan Əliyev — IFBB Avropa Çempionu, Professional Fitness Trainer. Sumqayıt və Xırdalan. Fərdi məşq proqramları, qidalanma planları, online koçinq."
+    />
+    <meta
+      name="keywords"
+      content="fitness trainer, personal trainer, sumqayıt, xırdalan, tərlan əliyev, IFBB, bodybuilding, idman"
+    />
+    <meta name="author" content="Tərlan Əliyev" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tərlan Əliyev — Fitness Trainer" />
+    <meta
+      property="og:description"
+      content="IFBB Avropa Çempionu. Sumqayıt & Xırdalan. Fərdi məşq proqramları ilə bədəninizi dəyişdirin."
+    />
+    <meta property="og:image" content="assets/images/main-1.jpg" />
+    <meta property="og:url" content="https://tarlaneliyev.github.io" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="az_AZ" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tərlan Əliyev — Fitness Trainer" />
+    <meta
+      name="twitter:description"
+      content="IFBB Avropa Çempionu. Fərdi məşq proqramları."
+    />
+    <meta name="twitter:image" content="assets/images/main-1.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- LOADER -->
+    <div id="loader">
+      <img src="assets/images/logo.png" alt="TA" class="loader-logo" />
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <a href="#hero" class="nav-brand">
+        <img src="assets/images/logo.png" alt="TA" class="nav-logo-img" />
+        <div class="nav-brand-text">
+          <div class="nav-brand-name"><span>Tərlan</span> Əliyev</div>
+          <div class="nav-brand-sub">Fitness Trainer</div>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services" data-i18n="nav_services">Xidmətlər</a></li>
+        <li><a href="#about" data-i18n="nav_about">Haqqımda</a></li>
+        <li>
+          <a href="#achievements" data-i18n="nav_achievements">Nailiyyətlər</a>
+        </li>
+        <li><a href="#testimonials" data-i18n="nav_testimonials">Rəylər</a></li>
+        <li><a href="#booking" data-i18n="nav_booking">Rezervasiya</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-switcher">
+          <button class="lang-btn active" onclick="setLang('az')">AZ</button>
+          <button class="lang-btn" onclick="setLang('ru')">RU</button>
+          <button class="lang-btn" onclick="setLang('en')">EN</button>
+        </div>
+        <a href="#booking" class="btn-nav-cta" data-i18n="nav_cta"
+          >Rezervasiya</a
+        >
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#services" data-i18n="nav_services">Xidmətlər</a>
+      <a href="#about" data-i18n="nav_about">Haqqımda</a>
+      <a href="#achievements" data-i18n="nav_achievements">Nailiyyətlər</a>
+      <a href="#testimonials" data-i18n="nav_testimonials">Rəylər</a>
+      <a href="#booking" data-i18n="nav_booking">Rezervasiya</a>
+      <div class="mobile-lang">
+        <button class="lang-btn active" onclick="setLang('az')">AZ</button>
+        <button class="lang-btn" onclick="setLang('ru')">RU</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════
+     HERO
+════════════════════════════════════ -->
+    <section id="hero">
+      <div class="hero-bg" id="heroBg"></div>
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        id="heroVideo"
+        style="
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          filter: brightness(0.55);
+          z-index: 0;
+        "
+      >
+        <source src="assets/images/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-grid-lines"></div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow" data-i18n="hero_eyebrow">
+          Professional Fitness Trainer
+        </div>
+        <h1 class="hero-title">
+          <span class="line1">Tərlan</span>
+          <span class="line2">Əliyev</span>
+        </h1>
+        <div class="hero-separator">
+          <span data-i18n="hero_motto">Transform · Perform · Evolve</span>
+        </div>
+        <p class="hero-desc" data-i18n="hero_desc">
+          10 illik təcrübə və IFBB çempionluğu ilə bədəninizi dəyişdirin. Hər
+          proqram tamamilə sizin məqsədlərinizə uyğun hazırlanır.
+        </p>
+        <div class="hero-actions">
+          <a href="#booking" class="btn-primary" data-i18n="hero_cta1"
+            >Rezervasiya Et</a
+          >
+          <a href="#about" class="btn-secondary" data-i18n="hero_cta2"
+            >Daha Çox</a
+          >
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">
+            <span class="count" data-target="10">0</span>+
+          </div>
+          <div class="hero-stat-label" data-i18n="stat_exp">İl Təcrübə</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">
+            <span class="count" data-target="400">0</span>+
+          </div>
+          <div class="hero-stat-label" data-i18n="stat_clients">Müştəri</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">
+            <span class="count" data-target="8">0</span>
+          </div>
+          <div class="hero-stat-label" data-i18n="stat_medals">
+            Beynəlxalq Medal
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span data-i18n="scroll_down">Aşağı Bax</span>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker-wrap">
+      <div class="ticker-track">
+        <span class="ticker-item">IFBB Avropa Çempionu</span
+        ><span class="ticker-dot">◆</span>
+        <span class="ticker-item">IFBB Dünya 2-ci Yeri</span
+        ><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Azərbaycan Çempionu</span
+        ><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Men's Physique 3x Çempion</span
+        ><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Sumqayıt & Xırdalan</span
+        ><span class="ticker-dot">◆</span>
+        <span class="ticker-item">10+ İl Təcrübə</span
+        ><span class="ticker-dot">◆</span>
+        <span class="ticker-item">IFBB Avropa Çempionu</span
+        ><span class="ticker-dot">◆</span>
+        <span class="ticker-item">IFBB Dünya 2-ci Yeri</span
+        ><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Azərbaycan Çempionu</span
+        ><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Men's Physique 3x Çempion</span
+        ><span class="ticker-dot">◆</span>
+        <span class="ticker-item">Sumqayıt & Xırdalan</span
+        ><span class="ticker-dot">◆</span>
+        <span class="ticker-item">10+ İl Təcrübə</span
+        ><span class="ticker-dot">◆</span>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════
+     SERVICES
+════════════════════════════════════ -->
+    <section id="services" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <div class="section-eyebrow" data-i18n="services_eyebrow">
+            Xidmətlər
+          </div>
+          <h2 class="section-title" data-i18n="services_title">
+            Nə təklif edirəm
+          </h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-card-num">01</div>
+            <div class="service-card-title" data-i18n="s1_title">
+              Personal Training
+            </div>
+            <div class="service-card-desc" data-i18n="s1_desc">
+              Fərdi məşq proqramı ilə maksimal nəticə əldə edin. Hər seans sizin
+              səviyyənizə uyğun hazırlanır.
+            </div>
+            <div class="service-card-price" data-i18n="s1_price">
+              100 AZN / Seans
+            </div>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card-num">02</div>
+            <div class="service-card-title" data-i18n="s2_title">
+              Qidalanma Planı
+            </div>
+            <div class="service-card-desc" data-i18n="s2_desc">
+              Məqsədlərinizə uyğun fərdi qidalanma strategiyası. Pəhriz yox,
+              düzgün qidalanma.
+            </div>
+            <div class="service-card-price" data-i18n="s2_price">
+              100 AZN / Ay
+            </div>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card-num">03</div>
+            <div class="service-card-title" data-i18n="s3_title">
+              Online Koçinq
+            </div>
+            <div class="service-card-desc" data-i18n="s3_desc">
+              İstənilən yerdən peşəkar rəhbərlik altında məşq edin. Həftəlik
+              proqram + video dəstək.
+            </div>
+            <div class="service-card-price" data-i18n="s3_price">
+              100 AZN / Ay
+            </div>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card-num">04</div>
+            <div class="service-card-title" data-i18n="s4_title">
+              Çəki İtirmə Proqramı
+            </div>
+            <div class="service-card-desc" data-i18n="s4_desc">
+              Elmi əsaslı yanaşma ilə dayanıqlı nəticələr. Sürətli deyil, düzgün
+              çəki itkisi.
+            </div>
+            <div class="service-card-price" data-i18n="s4_price">
+              100 AZN / Ay
+            </div>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card-num">05</div>
+            <div class="service-card-title" data-i18n="s5_title">
+              Kütlə Proqramı
+            </div>
+            <div class="service-card-desc" data-i18n="s5_desc">
+              Düzgün yüklənmə, düzgün qidalanma, maksimal əzələ artımı. Effektiv
+              kütlə qazanma strategiyası.
+            </div>
+            <div class="service-card-price" data-i18n="s5_price">
+              100 AZN / Ay
+            </div>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card-num">06</div>
+            <div class="service-card-title" data-i18n="s6_title">
+              Yarış Hazırlığı
+            </div>
+            <div class="service-card-desc" data-i18n="s6_desc">
+              Müsabiqə səviyyəsinde fiziki formaya çatmaq üçün intensiv hazırlıq
+              proqramı.
+            </div>
+            <div class="service-card-price" data-i18n="s6_price">
+              100 AZN / Ay
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+     PAIN POINTS
+════════════════════════════════════ -->
+    <section id="pain" class="section" style="background: var(--black)">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <div class="section-eyebrow" data-i18n="pain_eyebrow">
+            Tanıyıram Sizi
+          </div>
+          <h2 class="section-title" data-i18n="pain_title">Bu sizi tanıdır?</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="pain-grid">
+          <div class="pain-item reveal">
+            <div class="pain-problem">
+              <p data-i18n="p1_prob">Aylar keçir, güzgüdə heç nə dəyişmir.</p>
+            </div>
+            <div class="pain-arrow">→</div>
+            <div class="pain-solution">
+              <div class="pain-solution-tag">Tərlan həll edir</div>
+              <p data-i18n="p1_sol">
+                Hər həftə ölçülə bilən nəticə verən strukturlu proqram.
+              </p>
+            </div>
+          </div>
+          <div class="pain-item reveal">
+            <div class="pain-problem">
+              <p data-i18n="p2_prob">Proqram yoxdur, rastgələ məşq edirsən.</p>
+            </div>
+            <div class="pain-arrow">→</div>
+            <div class="pain-solution">
+              <div class="pain-solution-tag">Tərlan həll edir</div>
+              <p data-i18n="p2_sol">
+                Hər məşq planlanmış. Gyma girirsən, nə edəcəyini bilirsən.
+              </p>
+            </div>
+          </div>
+          <div class="pain-item reveal">
+            <div class="pain-problem">
+              <p data-i18n="p3_prob">Motivasiya gedir, ardıcıllıq qalmır.</p>
+            </div>
+            <div class="pain-arrow">→</div>
+            <div class="pain-solution">
+              <div class="pain-solution-tag">Tərlan həll edir</div>
+              <p data-i18n="p3_sol">
+                Sistem motivasiyanı əvəz edir. Aşağı enerjili günlər belə
+                irəliləyirsən.
+              </p>
+            </div>
+          </div>
+          <div class="pain-item reveal">
+            <div class="pain-problem">
+              <p data-i18n="p4_prob">
+                Hər şeyi sınadın, heç nə uzun müddət işləmədi.
+              </p>
+            </div>
+            <div class="pain-arrow">→</div>
+            <div class="pain-solution">
+              <div class="pain-solution-tag">Tərlan həll edir</div>
+              <p data-i18n="p4_sol">
+                Bir sübut edilmiş plan. Fərdi proqressiya. Tapmaca yoxdur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+     STATS
+════════════════════════════════════ -->
+    <div class="stats-bar">
+      <div class="stat-item reveal">
+        <div class="stat-num">
+          <span class="count" data-target="10">0</span
+          ><span class="stat-suffix">+</span>
+        </div>
+        <div class="stat-label" data-i18n="stat_exp">İl Təcrübə</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-num">
+          <span class="count" data-target="400">0</span
+          ><span class="stat-suffix">+</span>
+        </div>
+        <div class="stat-label" data-i18n="stat_clients">Müştəri</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-num"><span class="count" data-target="2">0</span></div>
+        <div class="stat-label" data-i18n="stat_euro">IFBB Avropa 1ci Yer</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-num"><span class="count" data-target="3">0</span></div>
+        <div class="stat-label" data-i18n="stat_physique">
+          Men's Physique Çempion
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════
+     ABOUT
+════════════════════════════════════ -->
+    <section id="about" class="section">
+      <div class="section-inner">
+        <div class="about-inner">
+          <div class="about-img-wrap reveal-left">
+            <div class="about-img-border"></div>
+            <div class="about-img-frame">
+              <img src="assets/images/casual.jpg" alt="Tərlan Əliyev" />
+              <div class="about-img-label">
+                <span data-i18n="about_img_label">Fitness Trainer</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-content reveal-right">
+            <div class="section-eyebrow" data-i18n="about_eyebrow">
+              Haqqımda
+            </div>
+            <h2 class="section-title">Tərlan Əliyev</h2>
+            <div class="section-divider"></div>
+            <div class="about-text" style="margin-top: 28px">
+              <p data-i18n="about_p1">
+                10 ildir fitness dünyasındayam — amma bu yol bir arzudan
+                başladı: öz bədənini anlamaq, hiss etmək, dəyişdirmək istəyi.
+                Əvvəlcə özüm üçün məşq etdim. Daha sonra başqalarının da bu
+                hissi yaşamasına kömək etmək istədim.
+              </p>
+              <p data-i18n="about_p2">
+                Beləcə bir trainer doğuldu. Bu gün Sumqayıt və Xırdalan-da
+                yüzlərlə insana idmanı sevdirdim, onlara məqsədlərinə çatmaqda
+                yol göstərdim.
+              </p>
+            </div>
+            <blockquote class="about-quote" data-i18n="about_quote">
+              "Sağlam bədəndə sağlam can — bu sadəcə bir söz deyil, hər gün
+              yaşadığım fəlsəfədir."
+            </blockquote>
+            <div class="about-badges">
+              <span class="badge" data-i18n="badge1">IFBB Avropa Çempionu</span>
+              <span class="badge" data-i18n="badge2">IFBB Dünya 2ci Yer</span>
+              <span class="badge" data-i18n="badge3">10+ İl Təcrübə</span>
+              <span class="badge" data-i18n="badge4">400+ Müştəri</span>
+              <span class="badge" data-i18n="badge5">Azərbaycan Çempionu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+     ACHIEVEMENTS
+════════════════════════════════════ -->
+    <section id="achievements" class="section" style="background: var(--black)">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <div class="section-eyebrow" data-i18n="ach_eyebrow">
+            Nailiyyətlər
+          </div>
+          <h2 class="section-title" data-i18n="ach_title">
+            Beynəlxalq Arenada
+          </h2>
+          <div class="section-divider"></div>
+          <p class="section-desc" data-i18n="ach_desc">
+            Azərbaycanı dünya səhnəsində təmsil etmək — hər yarış yeni bir
+            zirvədir.
+          </p>
+        </div>
+        <div class="achievements-grid">
+          <div class="achievement-card reveal">
+            <img src="assets/images/125.jpg" alt="IFBB European Championship" />
+            <div class="achievement-overlay">
+              <div class="achievement-tag">
+                IFBB European Championship · Barcelona
+              </div>
+              <div class="achievement-title" data-i18n="ach1">
+                Avropa Çempionu — 1ci Yer
+              </div>
+            </div>
+          </div>
+          <div class="achievement-card reveal">
+            <img src="assets/images/54.jpg" alt="IFBB World Championship" />
+            <div class="achievement-overlay">
+              <div class="achievement-tag">IFBB World Championship</div>
+              <div class="achievement-title" data-i18n="ach2">
+                Dünya Çempionatı — 2ci Yer
+              </div>
+            </div>
+          </div>
+          <div class="achievement-card reveal">
+            <img src="assets/images/321.jpg" alt="Men's Physique Champion" />
+            <div class="achievement-overlay">
+              <div class="achievement-tag">
+                IFBB Men's Physique · 3x Çempion
+              </div>
+              <div class="achievement-title" data-i18n="ach3">
+                Men's Physique — 3 Dəfə Birinci
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+     TRAINING IN ACTION
+════════════════════════════════════ -->
+    <section id="training" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <div class="section-eyebrow" data-i18n="train_eyebrow">
+            Məşq Prosesi
+          </div>
+          <h2 class="section-title" data-i18n="train_title">
+            Müştərilərimlə İş
+          </h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="training-grid">
+          <div class="training-card reveal">
+            <img src="assets/images/teacher-1.jpg" alt="Personal Training" />
+            <div class="training-overlay">
+              <div class="training-title" data-i18n="tc1_title">
+                Texniki Dəstək
+              </div>
+              <div class="training-desc" data-i18n="tc1_desc">
+                Hər hərəkətin düzgün icrasına nəzarət
+              </div>
+            </div>
+          </div>
+          <div class="training-card reveal">
+            <img src="assets/images/teacher-2.jpg" alt="Coaching" />
+            <div class="training-overlay">
+              <div class="training-title" data-i18n="tc2_title">
+                Fərdi Yanaşma
+              </div>
+              <div class="training-desc" data-i18n="tc2_desc">
+                Hər müştəriyə özünəməxsus proqram
+              </div>
+            </div>
+          </div>
+          <div class="training-card reveal">
+            <img src="assets/images/teacher-3.jpg" alt="Results" />
+            <div class="training-overlay">
+              <div class="training-title" data-i18n="tc3_title">
+                Nəticəyə Fokus
+              </div>
+              <div class="training-desc" data-i18n="tc3_desc">
+                Hər seans məqsədə doğru bir addım
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════ -->
+    <section id="testimonials" class="section" style="background: var(--black)">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <div class="section-eyebrow" data-i18n="test_eyebrow">Rəylər</div>
+          <h2 class="section-title" data-i18n="test_title">
+            Müştərilər nə deyir
+          </h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <div class="testimonial-quote">"</div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text" data-i18n="t1_text">
+              3 ayda 12 kq itirdim. Tərlan sadəcə trainer deyil, hər məşqdə
+              yanında olan bir motivasiya mənbəyidir. Həyatımı dəyişdirdi.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AH</div>
+              <div>
+                <div class="author-name">Anar H.</div>
+                <div class="author-result" data-i18n="t1_result">
+                  –12 kq / 3 ay
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal">
+            <div class="testimonial-quote">"</div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text" data-i18n="t2_text">
+              Həyatımda ilk dəfə idmanı sevdim. Fərdi yanaşması tamamilə
+              fərqlidir. Hər dərsdən həvəslə çıxıram.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">LM</div>
+              <div>
+                <div class="author-name">Leyla M.</div>
+                <div class="author-result" data-i18n="t2_result">
+                  +8 kq əzələ / 4 ay
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal">
+            <div class="testimonial-quote">"</div>
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text" data-i18n="t3_text">
+              Müsabiqəyə 6 həftədə hazırlaşdım. Nəticə gözləntimi üstələdi.
+              Tərlan proqramın hər detalını düşünür.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RQ</div>
+              <div>
+                <div class="author-name">Rauf Q.</div>
+                <div class="author-result" data-i18n="t3_result">
+                  Yarış hazırlığı — 1ci yer
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+     HOW IT WORKS
+════════════════════════════════════ -->
+    <section id="how" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <div class="section-eyebrow" data-i18n="how_eyebrow">
+            Necə İşləyir
+          </div>
+          <h2 class="section-title" data-i18n="how_title">3 Addımda Başla</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card reveal">
+            <div class="step-num">01</div>
+            <div class="step-icon">📋</div>
+            <div class="step-title" data-i18n="step1_title">Rezervasiya Et</div>
+            <div class="step-desc" data-i18n="step1_desc">
+              Formu doldurun, xidməti seçin. WhatsApp ilə dərhal əlaqə
+              saxlayacağam.
+            </div>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">02</div>
+            <div class="step-icon">🎯</div>
+            <div class="step-title" data-i18n="step2_title">
+              Məqsəd Təyin Et
+            </div>
+            <div class="step-desc" data-i18n="step2_desc">
+              İlk görüşdə səviyyənizi, məqsədlərinizi və cədvəlinizi öyrənirəm.
+              Fərdi proqram hazırlayıram.
+            </div>
+          </div>
+          <div class="step-card reveal">
+            <div class="step-num">03</div>
+            <div class="step-icon">💪</div>
+            <div class="step-title" data-i18n="step3_title">Nəticə Al</div>
+            <div class="step-desc" data-i18n="step3_desc">
+              Ardıcıl məşq, doğru qidalanma, həftəlik proqress. Nəticə
+              qaçınılmazdır.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+     FAQ
+════════════════════════════════════ -->
+    <section id="faq" class="section" style="background: var(--black)">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <div class="section-eyebrow">FAQ</div>
+          <h2 class="section-title" data-i18n="faq_title">
+            Tez-tez verilən suallar
+          </h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span data-i18n="faq1_q"
+                >Yeni başlayan biri üçün uyğundurmu?</span
+              >
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq1_a">
+                Bəli, tamamilə. Proqram hər səviyyəyə uyğunlaşdırılır. Sıfırdan
+                başlayan müştərilər üçün xüsusi yanaşma tətbiq olunur.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span data-i18n="faq2_q">Neçə müddətdə nəticə görünür?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq2_a">
+                Ardıcıllıqla məşq edən müştərilər adətən 4-6 həftədə ilk görünən
+                nəticəni hiss edir. Həqiqi transformasiya 3 ay ərzində başlayır.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span data-i18n="faq3_q">Online koçinq necə işləyir?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq3_a">
+                WhatsApp vasitəsilə həftəlik proqram göndərilir, video dəstək
+                verilir, proqress izlənilir. Harada olursanız olun,
+                yanınızdayam.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span data-i18n="faq4_q"
+                >Qidalanma planı ilə birlikdə məşq proqramı alınırsa endirim
+                varmı?</span
+              >
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq4_a">
+                Bəli, kompleks paket üçün xüsusi qiymət mövcuddur. Rezervasiya
+                zamanı bunu qeyd edin, sizinlə əlaqə saxlayacağam.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span data-i18n="faq5_q">Harada məşq etmək olar?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq5_a">
+                Sumqayıt və Xırdalan-da şəxsi məşqlər aparılır. Online koçinq
+                isə dünyanın istənilən yerindən əlçatandır.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+     BOOKING
+════════════════════════════════════ -->
+    <section id="booking" class="section">
+      <div class="section-inner">
+        <div class="booking-inner">
+          <div class="section-header reveal">
+            <div class="section-eyebrow" data-i18n="book_eyebrow">
+              Rezervasiya
+            </div>
+            <h2 class="section-title" data-i18n="book_title">İlk Addımı At</h2>
+            <div class="section-divider"></div>
+            <p class="section-desc" data-i18n="book_desc">
+              Formu doldurun — 24 saat ərzində WhatsApp vasitəsilə sizinlə əlaqə
+              saxlayacağam.
+            </p>
+          </div>
+          <form
+            class="booking-form reveal"
+            id="bookingForm"
+            onsubmit="submitForm(event)"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_name">Ad Soyad</label>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="name"
+                  data-i18n-placeholder="form_name_placeholder"
+                  placeholder="Adınız"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_phone"
+                  >Mobil Nömrə</label
+                >
+                <input
+                  class="form-input"
+                  type="tel"
+                  id="phone"
+                  placeholder="+994 50 000 00 00"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_service"
+                  >Xidmət</label
+                >
+                <select class="form-input form-select" id="service">
+                  <option data-i18n="srv_opt1">Personal Training</option>
+                  <option data-i18n="srv_opt2">Qidalanma Planı</option>
+                  <option data-i18n="srv_opt3">Online Koçinq</option>
+                  <option data-i18n="srv_opt4">Çəki İtirmə Proqramı</option>
+                  <option data-i18n="srv_opt5">Kütlə Proqramı</option>
+                  <option data-i18n="srv_opt6">Yarış Hazırlığı</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="form_city">Şəhər</label>
+                <select class="form-input form-select" id="city">
+                  <option>Sumqayıt</option>
+                  <option>Xırdalan</option>
+                  <option data-i18n="city_online">Online</option>
+                </select>
+              </div>
+            </div>
+            <div class="otp-note">
+              <span class="otp-note-icon">💬</span>
+              <span data-i18n="form_note"
+                >Formu doldurun — WhatsApp vasitəsilə sizinlə dərhal əlaqə
+                saxlanılacaq</span
+              >
+            </div>
+            <button type="submit" class="btn-submit" data-i18n="form_submit">
+              WhatsApp ilə Rezervasiya Et
+            </button>
+            <p class="form-note" data-i18n="form_subnote">
+              Cavab müddəti: 24 saat ərzində
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+     FOOTER
+════════════════════════════════════ -->
+    <footer>
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-name"><span>Tərlan</span> Əliyev</div>
+          <div class="footer-brand-sub">Fitness Trainer</div>
+          <p class="footer-tagline" data-i18n="footer_tagline">
+            Sağlam bədəndə sağlam can. Hər məşq daha güclü bir sənin üçündür.
+          </p>
+          <div class="social-links" style="margin-top: 24px">
+            <a
+              href="https://instagram.com/terlaneliyev0"
+              target="_blank"
+              class="social-btn"
+              aria-label="Instagram"
+              >IG</a
+            >
+            <a
+              href="https://tiktok.com/@terlaneliyev_"
+              target="_blank"
+              class="social-btn"
+              aria-label="TikTok"
+              >TT</a
+            >
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title" data-i18n="footer_nav">Naviqasiya</div>
+          <div class="footer-links">
+            <a href="#services" data-i18n="nav_services">Xidmətlər</a>
+            <a href="#about" data-i18n="nav_about">Haqqımda</a>
+            <a href="#achievements" data-i18n="nav_achievements"
+              >Nailiyyətlər</a
+            >
+            <a href="#testimonials" data-i18n="nav_testimonials">Rəylər</a>
+            <a href="#faq">FAQ</a>
+            <a href="#booking" data-i18n="nav_booking">Rezervasiya</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title" data-i18n="footer_services">
+            Xidmətlər
+          </div>
+          <div class="footer-links">
+            <a href="#services" data-i18n="s1_title">Personal Training</a>
+            <a href="#services" data-i18n="s2_title">Qidalanma Planı</a>
+            <a href="#services" data-i18n="s3_title">Online Koçinq</a>
+            <a href="#services" data-i18n="s4_title">Çəki İtirmə</a>
+            <a href="#services" data-i18n="s5_title">Kütlə Proqramı</a>
+            <a href="#services" data-i18n="s6_title">Yarış Hazırlığı</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title" data-i18n="footer_contact">Əlaqə</div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-label">WhatsApp</span>
+            <a href="https://wa.me/994702960002" class="footer-contact-val"
+              >+994 70 296 00 02</a
+            >
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-label">Instagram</span>
+            <a
+              href="https://instagram.com/terlaneliyev0"
+              target="_blank"
+              class="footer-contact-val"
+              >@terlaneliyev0</a
+            >
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-label">TikTok</span>
+            <a
+              href="https://tiktok.com/@terlaneliyev_"
+              target="_blank"
+              class="footer-contact-val"
+              >@terlaneliyev_</a
+            >
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-label" data-i18n="footer_location"
+              >Yer</span
+            >
+            <span class="footer-contact-val">Sumqayıt & Xırdalan</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy"
+          >© 2026 Tərlan Əliyev. Bütün hüquqlar qorunur.</span
+        >
+
+        <span class="footer-made" data-i18n="footer_made"
+          >Fitness · Strength · Results</span
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
