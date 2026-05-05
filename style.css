@@ -380,9 +380,9 @@ ul {
   inset: 0;
   background: linear-gradient(
     105deg,
-    rgba(8, 8, 8, 0.92) 0%,
-    rgba(8, 8, 8, 0.6) 50%,
-    rgba(8, 8, 8, 0.2) 100%
+    rgba(8, 8, 8, 0.55) 0%,
+    rgba(8, 8, 8, 0.25) 50%,
+    rgba(8, 8, 8, 0.05) 100%
   );
 }
 .hero-grid-lines {
